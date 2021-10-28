@@ -19,4 +19,32 @@
     </div>
     
     </body>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+              lesson: {
+                subject: "Maths",
+                campus: "London",
+                price: "£100",
+                spaces: 5,
+                image: "images/maths.png"
+              }
+            },
+            methods: {
+              addItem(){
+                if(this.lesson.spaces > 0){
+                  this.lesson.spaces -= 1
+                }
+              }
+            },
+      
+            computed: {
+              isAvailable(){
+                return this.lesson.spaces != 0
+              }
+            }
+        }) 
+      </script>
 </html>
