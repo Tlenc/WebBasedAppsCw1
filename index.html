@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-
-    <body>
-        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <img style="width: 100px;"v-bind:src="lesson.image">
+        <div style="text-align: left;">
+            <h1>Lesson: {{lesson.subject}}</h1>
+            <h2>Campus: {{lesson.campus}}</h2>
+            <h2>Price: {{lesson.price}}</h2>
+            <h2>Spaces: {{lesson.spaces}}</h2>
+            <button @click='addItem' :disabled='!isAvailable'>Add Lesson</button>
+        </div>      
+    </div>
     </body>
 </html>
